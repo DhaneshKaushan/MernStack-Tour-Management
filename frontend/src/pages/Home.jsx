@@ -7,6 +7,7 @@ import heroImg02 from "../assets/images/hero-img02.jpg";
 import heroVideo from "../assets/images/hero-video.mp4";
 import worldImg from "../assets/images/world.png";
 import Subtitle from "../shared/Subtitle";
+import SearchBar from "../shared/SearchBar";
 
 const Home = () => {
   return (
@@ -39,18 +40,20 @@ const Home = () => {
               </div>
             </Col>
             <Col lg='2'>
-              <div className="hero__img-box">
+              <div className="hero__img-box mt-4">
                 <video src={heroVideo} alt="" controls/>
               </div>
             </Col>
             <Col lg='2'>
-              <div className="hero__img-box">
+              <div className="hero__img-box mt-5">
                 <img src={heroImg02} alt=""/>
               </div>
             </Col>
+            <SearchBar/>
           </Row>
         </Container>
       </section>
+      
     </>
   );
 };
