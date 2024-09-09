@@ -1,9 +1,10 @@
-import React,{useRef, useEffect} from "react";
+import React,{useRef, useEffect, useContext} from "react";
 import { Container, Row, Button } from "reactstrap";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
 import "./header.css";
+import { AuthContext } from "../context/AuthContext";
 
 const nav__links = [
   {
@@ -23,6 +24,14 @@ const nav__links = [
 const Header = () => {
 
   const headerRef = useRef(null);
+  const navigate = useNavigate()
+  const {user, dispatch} = useContext(AuthContext)
+
+  const logout = ()=>{
+    dispatch({type:"LOGOUT"})
+    navigate('/')
+  }
+
   const stickeyHeaderFunc = ()=>{
     window.addEventListener('scroll',()=>{
       if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
