@@ -1,5 +1,4 @@
 import React,{useRef, useEffect, useContext} from "react";
-import React,{useRef, useEffect, useContext} from "react";
 import { Container, Row, Button } from "reactstrap";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 
@@ -8,6 +7,18 @@ import "./header.css";
 import {AuthContext} from './../../context/AuthContext';
 
 const nav__links = [
+  {
+    path:"/home",
+    display:"Home"
+  },
+  {
+    path:"/about",
+    display:"About"
+  },
+  {
+    path:"/tours",
+    display:"Tours"
+  },
 ];
 
 const Header = () => {

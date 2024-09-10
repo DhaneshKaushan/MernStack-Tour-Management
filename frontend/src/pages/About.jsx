@@ -1,7 +1,7 @@
 import React from "react";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row, Col ,Carousel } from "reactstrap";
 import "../styles/about.css";
-"use client";
+
 
 
 
