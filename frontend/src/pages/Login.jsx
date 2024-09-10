@@ -18,7 +18,7 @@ const Login = () => {
       setCredentials(prev => ({ ...prev, [e.target.id]:e.target.value}));
     }; 
 
-    const handleClick = e => {
+    const handleClick = (e)=> {
       e.preventDefault();
     };
     return <section>

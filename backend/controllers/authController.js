@@ -56,7 +56,7 @@ export const loginUser = async (req, res) => {
     const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '15d' });
 
     //set token in the browser cookies and send the response to the client
-    res.cookie('acessToken',token,{
+    res.cookie('accessToken',token,{
         httpOnly:true,
         expires:token.expiresIn
     }).status(200).json(
