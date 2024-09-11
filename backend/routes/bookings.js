@@ -1,11 +1,13 @@
 import express from 'express';
-import {verifyUser}  from '../utils/verifyToken.js';
-import { createBooking } from '../controllers/bookingController.js';
+import {verifyAdmin, verifyUser}  from '../utils/verifyToken.js';
+import { createBooking, getAllBooking, getBooking } from '../controllers/bookingController.js';
 
 const reviewRoute = express.Router();
 
 // Create a new review for a tour
 reviewRoute.post('/' , verifyUser, createBooking);
+reviewRoute.get('/:id' , verifyUser, getBooking);
+reviewRoute.get('/' , verifyAdmin, getAllBooking);
 
 
 
