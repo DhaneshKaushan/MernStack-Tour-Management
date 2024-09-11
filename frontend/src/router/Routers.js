@@ -9,6 +9,7 @@ import Register from './../pages/Register';
 import SearchResultList from './../pages/SearchResultList';
 import ThankYou from '../pages/ThankYou';
 import About from './../pages/About';
+import AdminDashboard from './../pages/AdminDashboard';
 
 const Routers = () => {
   return (
@@ -17,6 +18,7 @@ const Routers = () => {
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/tours' element={<Tours />} />
+        <Route path='/admindashboard' element={<AdminDashboard />} />
         <Route path='/tours/:id' element={<ToursDetails />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />

@@ -1,20 +1,95 @@
 .about-section {
-    padding: 60px 0;
-    background-color: #f8f9fa;
-    text-align: center;
-  }
-  
-  .about-section h1, h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .about-section p {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-  }
-  
+  padding: 50px 0;
+  background-color: #f7f7f7;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.fade-in, .fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.is-visible, .fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.team-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.team-carousel .carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-img {
+  border-radius: 50%;
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.mission-title {
+  font-size: 2rem;
+  color: #333;
+}
+
+.value-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.value-text {
+  font-size: 1rem;
+  color: #777;
+}
+
+.cta-section {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+.cta-title {
+  font-size: 2.2rem;
+  color: #333;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.mission-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mission-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.mission-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

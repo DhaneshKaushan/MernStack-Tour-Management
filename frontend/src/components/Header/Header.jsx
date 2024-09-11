@@ -19,6 +19,10 @@ const nav__links = [
     path: "/tours",
     display: "Tours",
   },
+  {
+    path: "/admindashboard",
+    display: "Admin",
+  },
 ];
 
 const Header = () => {
