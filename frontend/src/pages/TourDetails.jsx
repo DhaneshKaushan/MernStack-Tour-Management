@@ -5,7 +5,7 @@ import { useParams} from "react-router-dom";
 import calculateAvgRating from '../utils/avgRating';
 import avatar from '../assets/images/avatar.jpg';
 import Booking from '../components/Booking/Booking';
-import Newsletter from './../shared/Newsletter';
+//import Newsletter from './../shared/Newsletter';
 import useFetch from '../hooks/useFetch';
 import { BASE_URL } from './../utils/config';
 import { AuthContext } from '../context/AuthContext';
@@ -21,7 +21,7 @@ const TourDetails = () => {
   //
   
   const {data: tour,loading, error} = useFetch(`${BASE_URL}/tours/${id}`);
-
+  console.log(tour);
   // destructur properties from tour object
   const  {
     photo, 
@@ -41,11 +41,11 @@ const TourDetails = () => {
   const options = { day: 'numeric', month: 'long', year: 'numeric' };
 
   //submit request to the server
-  const submitHandler = async  e =>{
+  const submitHandler = async (e)  =>{
     e.preventDefault();
     const reviewText = reviewMsgRef.current.value;
 
-     
+  
        
 
       try{
@@ -83,7 +83,7 @@ const TourDetails = () => {
   };
 
   useEffect(()=>{
-    window.scrollTO(0,0);
+    window.scrollTo(0,0);
   },[tour]);
 
   return (
@@ -95,7 +95,7 @@ const TourDetails = () => {
         {!loading && !error && (
           <Row>
             <Col lg="8">
-             <div className="tour_content">
+             <div className="tour__content">
               <img src={photo} alt=""/>
               <div className="tour__info">
                 <h2>{title}</h2>
@@ -121,11 +121,11 @@ const TourDetails = () => {
               </div>
 
               {/*=======tour reviews section ========= */}
-              <div className="tour_reviews mt-4">
+              <div className="tour__reviews mt-4">
                 <h4>Reviews ({reviews?.length} reviews) </h4>
 
                 <Form onSubmit={submitHandler}>
-                  <div className="d-flex align-items-center gap-3 mb-4 rating_group">
+                  <div className="d-flex align-items-center gap-3 mb-4 rating__group">
                     <span onClick = {()=>setTourRating(1)}>1 <i class="ri-star-s-fill"></i> </span>
                     <span onClick = {()=>setTourRating(2)}>2 <i class="ri-star-s-fill"></i> </span>
                     <span onClick = {()=>setTourRating(3)}>3 <i class="ri-star-s-fill"></i> </span>
