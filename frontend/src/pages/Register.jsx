@@ -68,6 +68,10 @@ const Register = () => {
                       onChange = {handleChange} />
                     </FormGroup>
                     <FormGroup>
+                      <input type="email" placeholder="Email" required id="email" 
+                      onChange = {handleChange} />
+                    </FormGroup>
+                    <FormGroup>
                       <input type="password" placeholder="Password" required id="password" 
                       onChange = {handleChange} />
                     </FormGroup>  
